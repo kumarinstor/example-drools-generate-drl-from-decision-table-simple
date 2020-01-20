@@ -1,0 +1,18 @@
+﻿RuleSet,,org.example.rules
+Import,,org.example.model.*
+,,
+RuleTable ICD Code Coverage by Policy Type,,
+CONDITION,DESCRIPTION,ACTION
+$claim : Claim,,
+"icdCode == ""$param""",,$claim.setIcdCodeCoveredByPolicyType(Boolean.$param);
+ICD Code,ICD Code Description,Covered?
+A000,"Cholera due to Vibrio cholerae 01, biovar cholerae",TRUE
+A001,"Cholera due to Vibrio cholerae 01, biovar eltor",TRUE
+A009,"Cholera, unspecified",TRUE
+A0100,"Typhoid fever, unspecified",TRUE
+A0101,Typhoid meningitis,TRUE
+A0102,Typhoid fever with heart involvement,TRUE
+A0103,Typhoid pneumonia,TRUE
+A0104,Typhoid arthritis,TRUE
+A0105,Typhoid osteomyelitis,TRUE
+A0109,Typhoid fever with other complications,TRUE
